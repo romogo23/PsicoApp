@@ -1,0 +1,47 @@
+<div class="container">
+
+    <h1>Test</h1>
+    <br>
+    <h3>RESULTADOS</h3>
+    <br>
+    <p>Según los resultados obtenidos te recomendamos lo siguiente:</p>
+
+    <div>
+        <table>
+            <tr>
+                <p> {{advice.a1}} </p>
+            </tr>
+            <tr>
+                <p> {{advice.a2}} </p>
+            </tr>
+            <tr>
+                <p> {{advice.a3}} </p>
+            </tr>
+        </table>
+    </div>
+
+    <p>O bien puedes ver el siguiente video que muestra algunas de las recomendaciones anteriores:</p>
+
+    <br>
+    <div *ngIf="advice.videoURL === 'video depresion'">
+        <iframe width="388" height="215" src="https://www.youtube.com/embed/Vx_xTTlM-d8" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div *ngIf="advice.videoURL === 'video ansiedad'">
+        <iframe width="388" height="215" src="https://www.youtube.com/embed/CwfoyVa980U" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div *ngIf="advice.videoURL === 'video feliz'">
+        <iframe width="388" height="215" src="https://www.youtube.com/embed/m7Bc3pLyij0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <p>Recuerda que la mejor recomendación es consultar con un especialista</p>
+
+</div>
