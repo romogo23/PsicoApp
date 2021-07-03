@@ -4,12 +4,24 @@
     <br>
 
     <div class="card">
-        <div class="card-body">
-    <img src="https://www.tuequilibrioybienestar.es/wp-content/uploads/2020/07/consejos-contra-ansiedad.jpg" class="rounded mx-auto d-block" style="height: 250px; width: 250px; float: center;">
-
+        <div class="card-body" *ngFor="let image of images">
+            <img [src]="image.url" class="rounded mx-auto d-block" style="height: 250px; width: 250px; float: center;">
         </div>
 
+        <div class="card-body">
+            <!-- <audio controls src='assets/sounds/prueba.mp3' type="audio/mp3">
+            </audio> -->
+        </div>
     </div>
-    
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary" (click)="parar()">
+                    Detener sonido
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
